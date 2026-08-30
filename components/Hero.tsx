@@ -19,7 +19,7 @@ export default function Hero() {
           RARE
           <span className="text-blue"> FIN</span>
         </h1>
-        <div className="z-10 rounded-2xl border border-neutral-500 mt-8 bg-black/45 p-5 backdrop-blur-md md:bg-transparent md:p-0 md:backdrop-blur-0 md:border-0">
+        <div className="z-10 rounded-2xl border border-neutral-500 mt-8 bg-black/45 p-5 backdrop-blur-sm md:bg-transparent md:p-0 md:backdrop-blur-0 md:border-0">
           <h2 className="text-xl mb-4 mt-4 font-bold text-neutral-200 sm:text-3xl max-w-sm ">
             Aquarium & Pet Fish Shop in Sambhajinagar, Pune
           </h2>
@@ -33,7 +33,7 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="#catalog"
-            className="text-white border px-7 py-4 text-sm font-bold uppercase tracking-[0.03em] rounded-md"
+            className="text-white border border-neutral-500 px-7 py-4 text-sm font-bold uppercase tracking-[0.03em] rounded-xl backdrop-blur-sm"
           >
             View the Catalog
           </a>
@@ -41,7 +41,7 @@ export default function Hero() {
             href="https://maps.app.goo.gl/m6BpxrqpqjaD1JLm7?g_st=ac"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white border px-7 py-4 text-sm font-bold uppercase tracking-[0.03em] rounded-md"
+            className="text-white border border-neutral-500 px-7 py-4 text-sm font-bold uppercase tracking-[0.03em] rounded-xl backdrop-blur-sm"
           >
             Visit the Shop
           </a>
