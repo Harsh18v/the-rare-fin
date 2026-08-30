@@ -1,30 +1,21 @@
-# The Rare Fin — Aquarium Shop Website
+# The Rare Fin
 
-Next.js 14 (App Router) + Tailwind CSS. Built mobile-first.
+A modern aquarium & aquatic pets website built as a **freelance project** for **The Rare Fin Aquarium & Pets**.
 
-## Run locally
-```bash
-npm install
-npm run dev
-```
-Open http://localhost:3000
+The website showcases fish, aquariums, aquatic plants, and other aquatic essentials with a modern, responsive interface.
 
-## Build for production
-```bash
-npm run build
-npm run start
-```
+## Features
 
-## Where to edit
-- `app/layout.tsx` — fonts, page metadata (title/description for SEO)
-- `app/page.tsx` — order of sections on the homepage
-- `components/*.tsx` — each section (Hero, SpecimenGrid, ShopInfo, Services, Testimonials, Footer, StickyCTA)
-- `tailwind.config.ts` — the color palette (vitrine/ivory/brass/coral/sage) and fonts
-- `app/globals.css` — the `.specimen-tag` card style and other custom effects
+- Modern responsive UI
+- Fish catalog with images and pricing
+- Fish search and filtering
+- WhatsApp & call integration
+- Mobile-friendly design
+- Premium aquarium-focused landing page
 
-## Before you launch
-- Replace placeholder gradients (the colored blocks) with real photos — drop images in `public/` and swap the `<div className="bg-gradient-to-br ...">` blocks for `<Image>` from `next/image`
-- Replace phone number placeholders (`+9198XXXXXXXX`) in `StickyCTA.tsx` and `Footer.tsx`
-- Replace owner name, address, and hours in `ShopInfo.tsx` and `Footer.tsx`
-- Swap the `[ Google Map embed ]` placeholder in `ShopInfo.tsx` with a real embedded map iframe
-- Update fish/plant catalog data in `SpecimenGrid.tsx` (the `specimens` array)
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
