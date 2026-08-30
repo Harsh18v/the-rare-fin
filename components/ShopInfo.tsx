@@ -28,7 +28,7 @@ export default function ShopInfo() {
           <div>
             {/* OWNER */}
             <div className="flex items-center gap-3">
-              <img src="images/logo2.jpeg" alt="Rohit Bhagvat" className="h-12 w-12 rounded-full" />
+              <img src="/Images/logo2.jpeg" alt="Rohit Bhagvat" className="h-12 w-12 rounded-full" />
               <div>
                 <div className="text-lg font-bold text-white">Rohit Bhagvat</div>
                 <div className="text-[0.72rem] font-bold uppercase tracking-[0.05em] text-white/45">
