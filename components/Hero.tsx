@@ -13,18 +13,18 @@ export default function Hero() {
       </div>
       <div className="relative max-w-6xl ">
 
-        <h1 className="max-w-2xl text-[2.7rem] font-bold leading-[0.95] tracking-tighter text-white sm:text-[6rem]">
+        <h1 className="max-w-2xl text-5xl font-bold leading-[0.95] tracking-tighter text-white sm:text-[6rem]">
           THE
           <br />
           RARE
           <span className="text-blue"> FIN</span>
         </h1>
-        <div className="z-10 rounded-2xl bg-black/45 p-5 backdrop-blur-md md:bg-transparent md:p-0 md:backdrop-blur-0 md:border-0">
-          <h2 className="text-xl mb-4 mt-4 font-bold text-neutral-300 sm:text-3xl max-w-sm ">
+        <div className="z-10 rounded-2xl border border-neutral-500 mt-8 bg-black/45 p-5 backdrop-blur-md md:bg-transparent md:p-0 md:backdrop-blur-0 md:border-0">
+          <h2 className="text-xl mb-4 mt-4 font-bold text-neutral-200 sm:text-3xl max-w-sm ">
             Aquarium & Pet Fish Shop in Sambhajinagar, Pune
           </h2>
 
-          <p className="mt-7 max-w-sm text-md leading-relaxed font-semibold text-neutral-300">
+          <p className="mt-7 max-w-sm text-md leading-relaxed font-semibold text-neutral-200">
             Discover vibrant freshwater fish, premium aquariums, aquatic plants and everything you need to create a beautiful underwater world.
           </p>
         </div>

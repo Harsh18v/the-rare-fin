@@ -4,21 +4,21 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 sm:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <span className="text-2xl font-bold text-white">THE RARE FIN</span>
+            <span className="text-2xl font-bold text-white tracking-tighter">THE RARE <span className="text-blue">FIN</span></span>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/55">
               Rare and exotic aquarium fish, live plants, tanks, and custom
               aquascaping in Pune. Walk in, call, or message us before you visit.
             </p>
           </div>
           <div>
-            <div className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-sky">Visit</div>
+            <div className="text-sm font-bold uppercase text-sky">Visit</div>
             <p className="mt-3 text-sm text-white/65">
               G Block, Sector 18, Near Datta Mandir, Chinchwad, Sambhajinagar, Pune, Maharashtra 411019
             </p>
             <a href="https://maps.app.goo.gl/m6BpxrqpqjaD1JLm7?g_st=ac" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-bold text-sky">Get Directions →</a>
           </div>
           <div>
-            <div className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-sky">Contact</div>
+            <div className="text-sm font-bold uppercase tracking-tight text-sky">Contact</div>
             <a href="tel:+9198XXXXXXXX" className="mt-3 block text-sm text-white/65">+91 8803668855</a>
             <a href="tel:+9198XXXXXXXX" className="mt-3 block text-sm text-white/65">+91 9373208379</a>
             <a href="https://wa.me/919373208379" target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/65">WhatsApp</a>
