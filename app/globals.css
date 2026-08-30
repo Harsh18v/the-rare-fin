@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Bold spec card — thick outline instead of soft shadow */
+.spec-card {
+  border: 2.5px solid #0A0E14;
+  border-radius: 4px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.spec-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 #0B5FCE;
+}
+
+/* Duotone placeholder — stands in for a real blue/black-treated photo */
+.duotone {
+  background: linear-gradient(150deg, #0B5FCE 0%, #083E8C 45%, #0A0E14 100%);
+  position: relative;
+}
+.duotone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.18), transparent 55%);
+}
+
+.duotone-invert {
+  background: linear-gradient(150deg, #4FB6E8 0%, #0B5FCE 50%, #FFFFFF 100%);
+}
+
+/* Rarity dot indicator */
+.rarity-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.snap-row { scroll-snap-type: x mandatory; }
+.snap-item { scroll-snap-align: start; }
+
+/* Thick black button */
+.btn-black {
+  background: #0A0E14;
+  color: #FFFFFF;
+  border: 2.5px solid #0A0E14;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn-black:active { transform: translate(1px, 1px); }
+
+.btn-outline-black {
+  background: transparent;
+  color: #0A0E14;
+  border: 2.5px solid #0A0E14;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn-outline-black:active { transform: translate(1px, 1px); }
