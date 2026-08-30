@@ -8,7 +8,7 @@ import StickyCTA from "@/components/StickyCTA";
 
 export default function Home() {
   return (
-    <main className="pb-16 md:pb-0">
+    <main className="bg-black pb-16 md:pb-0">
       <Nav />
       <Hero />
       <SpecimenGrid />
