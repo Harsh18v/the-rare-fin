@@ -46,10 +46,11 @@ export default function ShopInfo() {
               <li className="grid gap-2 py-4 sm:flex sm:gap-4">
                 <span className="w-14 shrink-0 font-bold text-blue">Phone</span>
                 <span>+91 9373208379</span>
+                <span>+91 7083853151</span>
               </li>
               <li className="grid gap-2 py-4 sm:flex sm:gap-4">
-                <span className="w-14 shrink-0 font-bold text-blue">Hrs</span>
-                <span>Mon–Sat 10:00–8:30 · Sun 11:00–6:00</span>
+                <span className="w-14 shrink-0 font-bold text-blue">Hours</span>
+                <span>Mon–Sat 10:00–8:30</span>
               </li>
               <li className="grid gap-2 py-4 sm:flex sm:gap-4">
                 <span className="w-14 shrink-0 font-bold text-blue">Note</span>
@@ -61,7 +62,7 @@ export default function ShopInfo() {
               href="https://maps.app.goo.gl/m6BpxrqpqjaD1JLm7?g_st=ac"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex w-full items-center justify-center rounded-full border-2 border-white/50 bg-transparent px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white/75 transition hover:bg-white hover:text-black sm:w-auto"
+              className="mt-4 inline-flex w-full items-center justify-center rounded-full border-2 border-white/50 bg-transparent px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white/75 transition hover:bg-white/80 hover:text-black sm:w-auto"
             >
               Get Directions →
             </Link>
