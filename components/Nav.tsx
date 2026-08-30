@@ -6,7 +6,7 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-3 py-3 sm:px-8">
         <a href="#top" className="flex min-w-0 items-center gap-2.5">
           <span className="flex items-center justify-center gap-2 text-sm font-bold tracking-tight text-white sm:text-xl lg:text-3xl">
-            <img src="images/logo2.jpeg" alt="The Rare Fin Logo" className="h-9 w-9 rounded-full sm:h-12 sm:w-12" />
+            <img src="/Images/logo2.jpeg" alt="The Rare Fin Logo" className="h-9 w-9 rounded-full sm:h-12 sm:w-12" />
             <span>THE RARE FIN</span>
           </span>
         </a>

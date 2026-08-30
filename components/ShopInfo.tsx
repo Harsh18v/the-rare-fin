@@ -19,7 +19,7 @@ export default function ShopInfo() {
           {/* SHOP PHOTO */}
           <div className="h-full w-full overflow-hidden rounded-2xl border border-white/15">
             <img
-              src="/images/bg3.png"
+              src="/Images/bg3.png"
               alt="Inside The Rare Fin aquarium shop"
               className="h-full w-full"
             />
