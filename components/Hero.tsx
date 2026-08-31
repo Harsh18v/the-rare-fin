@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -31,20 +32,18 @@ export default function Hero() {
 
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <a
+          <Link
             href="#catalog"
             className="text-white border border-neutral-500 px-7 py-4 text-sm font-bold uppercase tracking-[0.03em] rounded-xl backdrop-blur-sm"
           >
             View the Catalog
-          </a>
-          <a
-            href="https://maps.app.goo.gl/m6BpxrqpqjaD1JLm7?g_st=ac"
-            target="_blank"
-            rel="noopener noreferrer"
+          </Link>
+          <Link
+            href="#shop"
             className="text-white border border-neutral-500 px-7 py-4 text-sm font-bold uppercase tracking-[0.03em] rounded-xl backdrop-blur-sm"
           >
             Visit the Shop
-          </a>
+          </Link>
         </div>
       </div>
 
