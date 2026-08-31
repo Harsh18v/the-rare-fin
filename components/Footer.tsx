@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer id="contact" className="border-t-[3px] border-blue bg-ink px-4 pb-28 pt-14 text-white sm:px-8 sm:pb-16 sm:pt-16">
@@ -15,14 +17,14 @@ export default function Footer() {
             <p className="mt-3 text-sm text-white/65">
               G Block, Sector 18, Near Datta Mandir, Chinchwad, Sambhajinagar, Pune, Maharashtra 411019
             </p>
-            <a href="https://maps.app.goo.gl/m6BpxrqpqjaD1JLm7?g_st=ac" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-bold text-sky">Get Directions →</a>
+            <Link href="https://maps.app.goo.gl/m6BpxrqpqjaD1JLm7?g_st=ac" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-bold text-sky">Get Directions →</Link>
           </div>
           <div>
             <div className="text-sm font-bold uppercase tracking-tight text-sky">Contact</div>
-            <a href="tel:+9198XXXXXXXX" className="mt-3 block text-sm text-white/65">+91 8803668855</a>
-            <a href="tel:+9198XXXXXXXX" className="mt-3 block text-sm text-white/65">+91 9373208379</a>
-            <a href="https://wa.me/919373208379" target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/65">WhatsApp</a>
-            <a href="https://instagram.com/the_rare_fin" target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/65">Instagram</a>
+            <Link href="tel:+919373208379" className="mt-3 block text-sm text-white/65">+91 9373208379</Link>
+            <Link href="tel:+917083853151" className="mt-3 block text-sm text-white/65">+91 7083853151</Link>
+            <Link href="https://wa.me/919373208379" target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/65">WhatsApp</Link>
+            <Link href="https://instagram.com/the_rare_fin" target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/65">Instagram</Link>
           </div>
         </div>
 
