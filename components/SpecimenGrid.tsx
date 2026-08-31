@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { specimens } from "../data/fishData";
 
 
-const PAGE_SIZE = 8;
+const PAGE_SIZE = 4;
 
 function FishPlaceholder() {
   return <div className="h-full w-full bg-gradient-to-br from-blue/30 via-ink to-ink" />;
@@ -119,7 +119,7 @@ export default function SpecimenGrid() {
 
         {/* PAGINATION */}
         {totalPages > 1 && (
-          <div className="mt-10 flex items-center justify-center gap-2">
+          <div className=" flex-wrap mt-10 flex items-center justify-center gap-2">
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={currentPage === 1}
@@ -132,7 +132,7 @@ export default function SpecimenGrid() {
               <button
                 key={n}
                 onClick={() => setPage(n)}
-                className={`h-9 w-9 rounded-full text-xs font-bold transition ${n === currentPage
+                className={`flexh-9 w-9 rounded-full p-2 text-xs font-bold transition ${n === currentPage
                     ? "bg-blue text-white"
                     : "border border-white/20 text-white/60 hover:border-white/50 hover:text-white"
                   }`}

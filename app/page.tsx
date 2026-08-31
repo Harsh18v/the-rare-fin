@@ -5,6 +5,7 @@ import ShopInfo from "@/components/ShopInfo";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
+import AccessoriesGrid from "@/components/AccessoriesGrid";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <SpecimenGrid />
+      <AccessoriesGrid/>
       <ShopInfo />
       <Services />
       <Footer />

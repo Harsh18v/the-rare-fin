@@ -6,7 +6,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 h-screen">
         <Image
-          src="/Images/bg.jpg"
+          src="/Images/bg-image-2.png"
           alt="Hero background"
           fill
           className="object-cover" />
@@ -20,11 +20,11 @@ export default function Hero() {
           <span className="text-blue"> FIN</span>
         </h1>
         <div className="z-10 rounded-2xl border border-neutral-500 mt-8 bg-black/45 p-5 backdrop-blur-sm md:bg-transparent md:p-0 md:backdrop-blur-0 md:border-0">
-          <h2 className="text-xl mb-4 mt-4 font-bold text-neutral-200 sm:text-3xl max-w-sm ">
+          <h2 className="text-xl mb-4 mt-4 font-bold text-neutral-100 sm:text-3xl max-w-sm ">
             Aquarium & Pet Fish Shop in Sambhajinagar, Pune
           </h2>
 
-          <p className="mt-7 max-w-sm text-md leading-relaxed font-semibold text-neutral-200">
+          <p className="mt-7 max-w-sm text-md leading-relaxed font-semibold text-neutral-100">
             Discover vibrant freshwater fish, premium aquariums, aquatic plants and everything you need to create a beautiful underwater world.
           </p>
         </div>
