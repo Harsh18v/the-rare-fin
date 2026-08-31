@@ -22,7 +22,7 @@ export const accessories: Accessory[] = [
     },
     {
         id: "RA-004",
-        name: "SunSun Canister Filter 302 / 303 / 304",
+        name: "SunSun Canister Filter",
         image: "https://www.cloningaquapets.com/cdn/shop/files/Untitleddesign_64.png?v=1721303957&width=1500",
     },
     {

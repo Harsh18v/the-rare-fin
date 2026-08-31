@@ -34,7 +34,7 @@ export default function AccessoriesGrid() {
     }
 
     return (
-        <section id="accessories" className="bg-ink px-5 py-20 text-white sm:px-8 sm:py-24">
+        <section id="accessories" className="border-t border-white/10 bg-ink px-5 py-20 text-white sm:px-8 sm:py-24">
             <div className="mx-auto max-w-7xl">
                 <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-blue">
                     <span className="h-[2px] w-8 bg-blue" />
@@ -66,18 +66,13 @@ export default function AccessoriesGrid() {
                     />
                 </div>
 
-                <p className="mt-4 text-xs text-white/30">
-                    Showing <span className="text-white/60">{paged.length}</span> of{" "}
-                    <span className="text-white/60">{filtered.length}</span> items
-                </p>
-
                 {/* GRID */}
                 {paged.length > 0 ? (
                     <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
                         {paged.map((item) => (
                             <article
                                 key={item.id}
-                                className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
+                                className=" flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
                             >
                                 <div className="aspect-[4/3] overflow-hidden">
                                     {item.image ? (
@@ -92,10 +87,10 @@ export default function AccessoriesGrid() {
                                     )}
                                 </div>
 
-                                <div className="p-5">
-                                    <h3 className="text-lg font-bold tracking-tight text-white">{item.name}</h3>
+                                <div className="p-5 w-full">
+                                    <h3 className=" text-lg font-bold tracking-tight text-white">{item.name}</h3>
 
-                                    <div className="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+                                    <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4">
                                         <Link
                                             href={`https://wa.me/919373208379?text=${encodeURIComponent(
                                                 `Hi! I'm interested in ${item.name}. Is it available?`

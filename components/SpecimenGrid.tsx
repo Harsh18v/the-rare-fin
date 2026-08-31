@@ -69,18 +69,13 @@ export default function SpecimenGrid() {
           />
         </div>
 
-        <p className="mt-4 text-xs text-white/30">
-          Showing <span className="text-white/60">{paged.length}</span> of{" "}
-          <span className="text-white/60">{filtered.length}</span> fish
-        </p>
-
         {/* GRID */}
         {paged.length > 0 ? (
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {paged.map((fish) => (
               <article
                 key={fish.id}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
+                className="flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   {fish.image ? (
@@ -95,10 +90,10 @@ export default function SpecimenGrid() {
                   )}
                 </div>
 
-                <div className="p-5">
+                <div className="p-5 w-full">
                   <h3 className="text-lg font-bold tracking-tight text-white">{fish.name}</h3>
 
-                  <div className="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+                  <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4">
                     <Link
                       href={`https://wa.me/919373208379?text=${encodeURIComponent(
                         `Hi! I'm interested in ${fish.name}. Is it available?`
@@ -145,9 +140,6 @@ export default function SpecimenGrid() {
           </div>
         )}
 
-        <div className="mt-10 max-w-xl text-md leading-6 text-white sm:text-base">
-          And more! We have a constantly changing collection of rare and exotic fish, so be sure to check back often or contact us for the latest availability.
-        </div>
       </div>
     </section>
   );
