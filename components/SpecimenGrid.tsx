@@ -28,9 +28,12 @@ export default function SpecimenGrid() {
     currentPage * PAGE_SIZE
   );
 
+  let startPage = Math.max(1, currentPage - 2);
+  let endPage = Math.min(totalPages, currentPage + 2);
+
   function handleSearch(value: string) {
     setSearch(value);
-    setPage(1); // reset to first page whenever the query changes
+    setPage(1);
   }
 
   return (
@@ -128,18 +131,9 @@ export default function SpecimenGrid() {
               Prev
             </button>
 
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-              <button
-                key={n}
-                onClick={() => setPage(n)}
-                className={`flexh-9 w-9 rounded-full p-2 text-xs font-bold transition ${n === currentPage
-                    ? "bg-blue text-white"
-                    : "border border-white/20 text-white/60 hover:border-white/50 hover:text-white"
-                  }`}
-              >
-                {n}
-              </button>
-            ))}
+            <div className="flex h-8 py-1 px-3 mx-2 text-xs items-center justify-center rounded-full bg-blue text-white">
+              {currentPage} of {totalPages}
+            </div>
 
             <button
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}

@@ -128,18 +128,9 @@ export default function AccessoriesGrid() {
                             Prev
                         </button>
 
-                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-                            <button
-                                key={n}
-                                onClick={() => setPage(n)}
-                                className={`h-9 w-9 rounded-full text-xs font-bold transition ${n === currentPage
-                                        ? "bg-blue text-white"
-                                        : "border border-white/20 text-white/60 hover:border-white/50 hover:text-white"
-                                    }`}
-                            >
-                                {n}
-                            </button>
-                        ))}
+                        <div className="flex h-8 py-1 px-3 mx-2 text-xs items-center justify-center rounded-full bg-blue text-white">
+                            {currentPage} of {totalPages}
+                        </div>
 
                         <button
                             onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
