@@ -13,7 +13,7 @@ export default function Hero() {
       </div>
       <div className="relative max-w-6xl ">
 
-        <h1 className="max-w-2xl text-5xl font-bold leading-[0.95] tracking-tighter text-white sm:text-[6rem]">
+        <h1 className="max-w-2xl text-5xl font-bold leading-[0.95] tracking-tighter text-white sm:text-[6rem] backdrop-blur-sm">
           THE
           <br />
           RARE
