@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function StickyCTA() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 px-3 pb-3 md:hidden">
-      <div className="mx-auto flex max-w-md items-center gap-2 rounded-2xl border border-white/50 bg-ink p-2 shadow-[0_8px_30px_rgba(0,0,0,0.4)] backdrop-blur-xl">
+      <div className="mx-auto flex max-w-md items-center gap-2 rounded-full border border-white/50 bg-ink p-2 shadow-[0_8px_30px_rgba(0,0,0,0.4)] backdrop-blur-xl">
         <Link
           href="tel:+919373208379"
           className="flex flex-1 items-center justify-center gap-2 rounded-xl px-3 py-3 text-sm font-medium text-white transition active:scale-[0.98] active:bg-white/[0.06]"
@@ -27,7 +27,7 @@ export default function StickyCTA() {
           href="https://wa.me/917083853151"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-[1.3] items-center justify-center gap-2 rounded-xl bg-blue px-4 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-95 active:scale-[0.98]"
+          className="flex flex-[1.3] items-center justify-center gap-2 rounded-full bg-blue px-4 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-95 active:scale-[0.98]"
           aria-label="Chat on WhatsApp"
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15">
