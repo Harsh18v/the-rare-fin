@@ -29,7 +29,7 @@ export const specimens: Fish[] = [
     },
     {
         id: "RF-076",
-        name: "Stingray",
+        name: "Freshwater Stingray",
         image: "https://www.treehugger.com/thmb/cULw1P7R-kNh8GOqxc_qQ80aZgU=/2208x1472/filters:fill(auto,1)/GettyImages-1084272706-67e82d99d00447dd9cd0567739e51e18.jpg",
     },
     {
@@ -201,8 +201,8 @@ export const specimens: Fish[] = [
     },
     {
         id: "RF-033",
-        name: "Damasoni Barb",
-        image: "https://c.tutti.ch/big/0375644231.jpg",
+        name: "Damsoni Barb",
+        image: "https://aquadiction.world/img/profile/denison-barb1.webp",
     },
     {
         id: "RF-034",
@@ -252,7 +252,7 @@ export const specimens: Fish[] = [
     {
         id: "RF-043",
         name: "Surfy Tetra",
-        image: "https://aquariumbuddies.com/wp-content/uploads/2026/04/how-often-do-you-feed-tetra-fish.jpg",
+        image: "https://freshwateraquatica.org/cdn/shop/products/Untitled-design-2.jpg?v=1693571081&width=1445",
     },
     {
         id: "RF-044",
@@ -404,5 +404,15 @@ export const specimens: Fish[] = [
         name: "Frontosa",
         image: "https://tse4.mm.bing.net/th/id/OIP.co6erdTemIesfx2fl6k8PwHaGy?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
     },
+    {
+        id: "RF-077",
+        name: "Archer Fish",
+        image: "https://cff2.earth.com/uploads/2022/02/10084723/Archerfish-scaled.jpg",
+    },
+    {
+        id: "RF-078",
+        name: "Peacock bass",
+        image: "https://www.howtocatchanyfish.com/uploads/8/8/0/2/8802125/img-1658_orig.jpg",
+    }
 
 ];

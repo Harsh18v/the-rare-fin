@@ -45,8 +45,10 @@ export default function ShopInfo() {
               </li>
               <li className="grid gap-2 py-4 sm:flex sm:gap-4">
                 <span className="w-14 shrink-0 font-bold text-blue">Phone</span>
-                <span>+91 9373208379</span>
-                <span>+91 7083853151</span>
+                <div className="flex flex-col gap-1">
+                  <span>Rohit Bhagvat : +91 7083853151</span>
+                <span>Yash Badhe : +91 9373208379</span>
+                </div>
               </li>
               <li className="grid gap-2 py-4 sm:flex sm:gap-4">
                 <span className="w-14 shrink-0 font-bold text-blue">Hours</span>

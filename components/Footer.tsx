@@ -21,9 +21,9 @@ export default function Footer() {
           </div>
           <div>
             <div className="text-sm font-bold uppercase tracking-tight text-sky">Contact</div>
-            <Link href="tel:+919373208379" className="mt-3 block text-sm text-white/65">+91 9373208379</Link>
             <Link href="tel:+917083853151" className="mt-3 block text-sm text-white/65">+91 7083853151</Link>
-            <Link href="https://wa.me/919373208379" target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/65">WhatsApp</Link>
+            <Link href="tel:+919373208379" className="mt-3 block text-sm text-white/65">+91 9373208379</Link>
+            <Link href="https://wa.me/917083853151" target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/65">WhatsApp</Link>
             <Link href="https://instagram.com/the_rare_fin" target="_blank" rel="noopener noreferrer" className="mt-2 block text-sm text-white/65">Instagram</Link>
           </div>
         </div>

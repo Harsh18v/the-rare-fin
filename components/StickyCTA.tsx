@@ -24,7 +24,7 @@ export default function StickyCTA() {
         </Link>
 
         <Link
-          href="https://wa.me/919373208379"
+          href="https://wa.me/917083853151"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-[1.3] items-center justify-center gap-2 rounded-xl bg-blue px-4 py-3 text-sm font-medium text-white shadow-sm transition hover:opacity-95 active:scale-[0.98]"
