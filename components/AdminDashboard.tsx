@@ -108,7 +108,7 @@ export default function AdminDashboard({
             {/* MAIN */}
             {/* ============================================ */}
             <main className="min-w-0 flex-1 overflow-x-hidden">
-                <header className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-4 sm:px-8">
+                <header className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-4 py-4 sm:px-8">
                     <div className="min-w-0 flex-1">
                         <h1 className="text-lg font-bold sm:text-xl">
                             {tab === "fish" ? "Fish Inventory" : "Accessories Inventory"}
@@ -117,38 +117,36 @@ export default function AdminDashboard({
                     </div>
 
 
-                    <button
-                        onClick={() => setShowAddModal(true)}
-                        className="flex shrink-0 items-center gap-2 rounded-full bg-blue px-4 py-2.5 text-xs font-bold uppercase tracking-wide transition hover:opacity-90"
-                    >
-                        <span className="text-base leading-none">+</span>
-                        Add {tab === "fish" ? "Fish" : "Accessory"}
-                    </button>
+
                 </header>
 
-                <div className="px-5 py-6 sm:px-8">
-                    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                        <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                            <p className="text-[10px] font-bold uppercase tracking-wider text-white/40">Total Fish</p>
-                            <p className="mt-1 text-2xl font-extrabold">{initialFish.length}</p>
+                <div className="px-4 py-5 sm:px-8 sm:py-6">
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                        <div className="relative w-full max-w-sm">
+                            <svg viewBox="0 0 24 24" fill="none" className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-white/30">
+                                <path d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+                            </svg>
+                            <input
+                                type="text"
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                placeholder={`Search ${tab}...`}
+                                className="h-10 w-full rounded-full border border-white/15 bg-white/[0.04] pl-10 pr-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-blue/60"
+                            />
                         </div>
-                        <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                            <p className="text-[10px] font-bold uppercase tracking-wider text-white/40">Accessories</p>
-                            <p className="mt-1 text-2xl font-extrabold">{initialAccessories.length}</p>
-                        </div>
-                        <div className="col-span-2 min-w-0 w-full m-0 px-0 pt-0 sm:col-span-1 sm:m-2 sm:px-8 sm:pt-2">
-                            <div className="relative w-full max-w-sm">
-                                <svg viewBox="0 0 24 24" fill="none" className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-white/30">
-                                    <path d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-                                </svg>
-                                <input
-                                    type="text"
-                                    value={search}
-                                    onChange={(e) => setSearch(e.target.value)}
-                                    placeholder={`Search ${tab}...`}
-                                    className="h-10 w-full rounded-full border border-white/15 bg-white/[0.04] pl-10 pr-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-blue/60"
-                                />
-                            </div>
+                        <div className="flex w-full items-center justify-end gap-2 sm:w-auto">
+                            <button
+                                onClick={() => setShowAddModal(true)}
+                                className="flex shrink-0 items-center gap-2 rounded-full bg-blue px-4 py-2.5 text-xs font-bold uppercase tracking-wide transition hover:opacity-90"
+                            >
+                                <span className="text-base leading-none">+</span>
+                                Add {tab === "fish" ? "Fish" : "Accessory"}
+                            </button>
+                            <form action={logout} className="sm:hidden">
+                                <button className="flex shrink-0 items-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-white/70 transition hover:bg-white/5 hover:text-white">
+                                    Logout
+                                </button>
+                            </form>
                         </div>
                     </div>
 
@@ -170,7 +168,52 @@ export default function AdminDashboard({
                         </button>
                     </div>
 
-                    <div className="mt-6 overflow-x-auto rounded-xl border border-white/10">
+                    <div className="mt-6 space-y-3 sm:hidden">
+                        {filteredItems.length === 0 ? (
+                            <div className="rounded-xl border border-white/10 px-4 py-10 text-center text-sm text-white/40">
+                                Nothing here yet — add one using the button above.
+                            </div>
+                        ) : (
+                            filteredItems.map((item) => (
+                                <article
+                                    key={item.id}
+                                    className="flex min-w-0 items-center gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-3"
+                                >
+                                    <div className="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-white/5">
+                                        {item.image_url && (
+                                            <img src={item.image_url} alt={item.name} className="h-full w-full object-cover" />
+                                        )}
+                                    </div>
+                                    <div className="min-w-0 flex-1">
+                                        <p className="break-words text-sm font-semibold">{item.name}</p>
+                                        <p className="mt-1 text-sm text-white/60">{item.price}</p>
+                                    </div>
+                                    <div className="flex shrink-0 flex-col gap-2">
+                                        <button
+                                            onClick={() => setEditingItem(item)}
+                                            className="rounded-full border border-white/15 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wide text-white/60 transition hover:border-blue/50 hover:text-blue"
+                                        >
+                                            Edit
+                                        </button>
+                                        <form
+                                            action={async () => {
+                                                await deleteAction(item.id);
+                                            }}
+                                        >
+                                            <button
+                                                type="submit"
+                                                className="w-full rounded-full border border-white/15 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wide text-white/50 transition hover:border-red-400/50 hover:text-red-400"
+                                            >
+                                                Delete
+                                            </button>
+                                        </form>
+                                    </div>
+                                </article>
+                            ))
+                        )}
+                    </div>
+
+                    <div className="mt-6 hidden overflow-x-auto rounded-xl border border-white/10 sm:block">
                         <table className="w-full min-w-[560px] text-left text-sm">
                             <thead>
                                 <tr className="border-b border-white/10 bg-white/[0.02] text-[10px] font-bold uppercase tracking-wider text-white/40">
