@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { accessories } from "../data/accessoryData";
-
 
 const PAGE_SIZE = 4;
 
@@ -11,14 +9,14 @@ function AccessoryPlaceholder() {
     return <div className="h-full w-full bg-gradient-to-br from-blue/30 via-ink to-ink" />;
 }
 
-export default function AccessoriesGrid() {
+export default function AccessoriesGrid({ initialAccessories }: { initialAccessories: any[] }) {
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
 
     const filtered = useMemo(() => {
         const query = search.trim().toLowerCase();
-        if (!query) return accessories;
-        return accessories.filter((item) => item.name.toLowerCase().includes(query));
+        if (!query) return initialAccessories;
+        return initialAccessories.filter((item) => item.name.toLowerCase().includes(query));
     }, [search]);
 
     const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
@@ -75,9 +73,9 @@ export default function AccessoriesGrid() {
                                 className=" flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
                             >
                                 <div className="aspect-[4/3] overflow-hidden">
-                                    {item.image ? (
+                                    {item.image_url ? (
                                         <img
-                                            src={item.image}
+                                            src={item.image_url}
                                             alt={item.name}
                                             loading="lazy"
                                             className="h-full w-full object-cover"

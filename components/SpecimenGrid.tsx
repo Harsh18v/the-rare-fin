@@ -2,24 +2,23 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { specimens } from "../data/fishData";
 
 
-const PAGE_SIZE = 4;
+const PAGE_SIZE = 8;
 
 function FishPlaceholder() {
   return <div className="h-full w-full bg-gradient-to-br from-blue/30 via-ink to-ink" />;
 }
 
-export default function SpecimenGrid() {
+export default function SpecimenGrid({ initialFish }: { initialFish: any[] }) {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
 
   const filtered = useMemo(() => {
     const query = search.trim().toLowerCase();
-    if (!query) return specimens;
-    return specimens.filter((fish) => fish.name.toLowerCase().includes(query));
-  }, [search]);
+    if (!query) return initialFish;
+    return initialFish.filter((fish) => fish.name.toLowerCase().includes(query));
+  }, [search, initialFish]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -78,9 +77,9 @@ export default function SpecimenGrid() {
                 className="flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
               >
                 <div className="aspect-[4/3] overflow-hidden">
-                  {fish.image ? (
+                  {fish.image_url ? (
                     <img
-                      src={fish.image}
+                      src={fish.image_url}
                       alt={fish.name}
                       loading="lazy"
                       className="h-full w-full object-cover"
