@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-
 const PAGE_SIZE = 8;
 
 function FishPlaceholder() {
@@ -27,16 +26,13 @@ export default function SpecimenGrid({ initialFish }: { initialFish: any[] }) {
     currentPage * PAGE_SIZE
   );
 
-  let startPage = Math.max(1, currentPage - 2);
-  let endPage = Math.min(totalPages, currentPage + 2);
-
   function handleSearch(value: string) {
     setSearch(value);
     setPage(1);
   }
 
   return (
-    <section id="catalog" className=" bg-ink px-5 py-20 text-white sm:px-8 sm:py-24">
+    <section id="catalog" className="bg-ink px-5 py-20 text-white sm:px-8 sm:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-blue">
           <span className="h-[2px] w-8 bg-blue" />
@@ -71,42 +67,61 @@ export default function SpecimenGrid({ initialFish }: { initialFish: any[] }) {
         {/* GRID */}
         {paged.length > 0 ? (
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {paged.map((fish) => (
-              <article
-                key={fish.id}
-                className="flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  {fish.image_url ? (
-                    <img
-                      src={fish.image_url}
-                      alt={fish.name}
-                      loading="lazy"
-                      className="h-full w-full object-cover"
-                    />
-                  ) : (
-                    <FishPlaceholder />
-                  )}
-                </div>
+            {paged.map((fish) => {
+              const outOfStock = !fish.stock || fish.stock <= 0;
 
-                <div className="p-5 w-full">
-                  <h3 className="text-lg font-bold tracking-tight text-white">{fish.name}</h3>
+              return (
+                <article
+                  key={fish.id}
+                  className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    {fish.image_url ? (
+                      <img
+                        src={fish.image_url}
+                        alt={fish.name}
+                        loading="lazy"
+                        className={`h-full w-full object-cover ${outOfStock ? "opacity-40 grayscale" : ""}`}
+                      />
+                    ) : (
+                      <FishPlaceholder />
+                    )}
 
-                  <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4">
-                    <Link
-                      href={`https://wa.me/919373208379?text=${encodeURIComponent(
-                        `Hi! I'm interested in ${fish.name}. Is it available?`
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-full border-2 border-blue-deep bg-transparent px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-gray-300 transition hover:bg-white hover:text-black"
-                    >
-                      Enquire
-                    </Link>
+                    {outOfStock && (
+                      <span className="absolute left-2 top-2 rounded-full bg-black/70 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-white/70">
+                        Out of Stock
+                      </span>
+                    )}
                   </div>
-                </div>
-              </article>
-            ))}
+
+                  <div className="flex flex-1 flex-col p-5">
+                    <h3 className="text-lg font-bold tracking-tight text-white">{fish.name}</h3>
+                    <p className="mt-1 text-sm font-semibold text-white/70">{fish.price}</p>
+
+                    <div className="mt-auto flex items-center justify-between border-t border-white/10 pt-4">
+                      {outOfStock ? (
+                        <span className="text-xs font-semibold text-red-400">Out of stock</span>
+                      ) : (
+                        <span className="text-xs font-semibold text-green-400">
+                          {fish.stock} in stock
+                        </span>
+                      )}
+
+                      <Link
+                        href={`https://wa.me/919373208379?text=${encodeURIComponent(
+                          `Hi! I'm interested in ${fish.name}. Is it available?`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border-2 border-blue-deep bg-transparent px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-gray-300 transition hover:bg-white hover:text-black"
+                      >
+                        Enquire
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         ) : (
           <div className="mt-6 rounded-2xl border border-white/15 bg-white/[0.02] px-6 py-16 text-center">
@@ -116,7 +131,7 @@ export default function SpecimenGrid({ initialFish }: { initialFish: any[] }) {
 
         {/* PAGINATION */}
         {totalPages > 1 && (
-          <div className=" flex-wrap mt-10 flex items-center justify-center gap-2">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={currentPage === 1}
@@ -125,7 +140,7 @@ export default function SpecimenGrid({ initialFish }: { initialFish: any[] }) {
               Prev
             </button>
 
-            <div className="flex h-8 py-1 px-3 mx-2 text-xs items-center justify-center rounded-full bg-blue text-white">
+            <div className="mx-2 flex h-8 items-center justify-center rounded-full bg-blue px-3 py-1 text-xs text-white">
               {currentPage} of {totalPages}
             </div>
 
@@ -138,7 +153,6 @@ export default function SpecimenGrid({ initialFish }: { initialFish: any[] }) {
             </button>
           </div>
         )}
-
       </div>
     </section>
   );

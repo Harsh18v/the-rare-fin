@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default async function LoginPage({ searchParams, }: { searchParams: Promise<{ error?: string }>; }) {
@@ -106,6 +107,12 @@ export default async function LoginPage({ searchParams, }: { searchParams: Promi
                                 placeholder="••••••••"
                             />
                         </div>
+                        <Link
+                            href="/admin/forgot-password"
+                            className="block text-right text-xs text-white/40 transition hover:text-white"
+                        >
+                            Forgot password?
+                        </Link>
 
                         <button
                             type="submit"

@@ -13,6 +13,7 @@ export async function addFish(formData: FormData) {
         name: formData.get("name"),
         price: formData.get("price"),
         image_url: formData.get("image_url"),
+        stock: Number(formData.get("stock")) || 0, 
     });
 
     revalidatePath("/");
@@ -33,6 +34,7 @@ export async function addAccessory(formData: FormData) {
         name: formData.get("name"),
         price: formData.get("price"),
         image_url: formData.get("image_url"),
+        stock: Number(formData.get("stock")) || 0,
     });
 
     revalidatePath("/");
@@ -61,6 +63,7 @@ export async function updateFish(id: string, formData: FormData) {
             name: formData.get("name"),
             price: formData.get("price"),
             image_url: formData.get("image_url"),
+            stock: Number(formData.get("stock")) || 0, 
         })
         .eq("id", id);
 
@@ -77,6 +80,7 @@ export async function updateAccessory(id: string, formData: FormData) {
             name: formData.get("name"),
             price: formData.get("price"),
             image_url: formData.get("image_url"),
+            stock: Number(formData.get("stock")) || 0,
         })
         .eq("id", id);
 
