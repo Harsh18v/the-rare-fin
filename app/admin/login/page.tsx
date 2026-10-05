@@ -107,12 +107,12 @@ export default async function LoginPage({ searchParams, }: { searchParams: Promi
                                 placeholder="••••••••"
                             />
                         </div>
-                        <Link
+                        {/* <Link
                             href="/admin/forgot-password"
                             className="block text-right text-xs text-white/40 transition hover:text-white"
                         >
                             Forgot password?
-                        </Link>
+                        </Link> */}
 
                         <button
                             type="submit"
