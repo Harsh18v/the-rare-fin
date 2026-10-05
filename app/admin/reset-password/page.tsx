@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { updatePassword } from "./actions";
+import { updatePassword } from "../actions";
 
 export default function ResetPasswordPage() {
     const [error, setError] = useState("");

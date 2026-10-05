@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import Link from "next/link";
-import { sendResetLink } from "./actions";
+import { sendResetLink } from "../actions";
 
 export default function ForgotPasswordPage() {
     const [sent, setSent] = useState(false);
