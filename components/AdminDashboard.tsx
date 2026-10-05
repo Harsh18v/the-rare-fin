@@ -56,7 +56,7 @@ export default function AdminDashboard({
             {/* ============================================ */}
             {/* SIDEBAR */}
             {/* ============================================ */}
-            <aside className="hidden w-60 shrink-0 flex-col border-r border-white/10 bg-black sm:flex">
+            <aside className="h-screen hidden w-60 shrink-0 flex-col border-r border-white/10 bg-black sm:flex">
                 <div className="flex items-center gap-2 border-b border-white/10 px-6 py-5">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="shrink-0">
                         <path d="M3 12c3-5 8-7 13-5-1 2-1 3 0 5-1 2-1 3 0 5-5 2-10 0-13-5Z" stroke="#0B5FCE" strokeWidth="2" />
